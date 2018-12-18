@@ -114,9 +114,9 @@ void gen_colors(int size)
 	for (int i = 0; i < size; ++i)
 	{
 		glm::vec3 vertex;
-		vertex.x = 0; //(float)rand() / RAND_MAX;
-		vertex.y = 1; //(float)rand() / RAND_MAX;
-		vertex.z = 1; //(float)rand() / RAND_MAX;
+		vertex.x = (float)rand() / RAND_MAX;
+		vertex.y = (float)rand() / RAND_MAX;
+		vertex.z = (float)rand() / RAND_MAX;
 		color_vertices.push_back(vertex);
 	}
 }
@@ -216,17 +216,6 @@ void reshape(int w, int h)
 
 float x = 0; float z = 0; float y = 0;
 float SPEED = 0.1;
-
-GLfloat color[] = {
-	1.0, 1.0, 0.0,
-	1.0, 1.0, 0.0,
-	1.0, 1.0, 0.0,
-	1.0, 1.0, 0.0,
-	1.0, 1.0, 0.0,
-	0.0, 1.0, 0.0,
-	0.0, 1.0, 0.0,
-	0.0, 1.0, 0.0
-};
 
 void prepare_buffers()
 {
